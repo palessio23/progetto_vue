@@ -1,0 +1,107 @@
+{
+
+    "status": 0,
+
+    "message": null,
+
+    "token": null,
+
+    "numRecord": 0,
+
+    "extendedProperties": null,
+
+    "propertie": {
+
+        "codiceDipendente": "CALROS01002",
+
+        "oreOrdinarie": 168.0,
+
+        "oreStraordinarie": 0.0,
+
+        "totaleCosto": 4950.3600000000015,
+
+        "costoMedio": 29.46642857142858,
+
+        "oreTotali": 168.0,
+
+        "periodo": 2.0,
+
+        "anno": 2019.0,
+
+        "dettaglioCosti": [
+
+            {
+
+                "retribuzioni": "3246.71",
+
+                "inail": "23.48",
+
+                "totale": "3945.8900000000003",
+
+                "contributivo": "675.7",
+
+                "tipoContributo": "ORDINARIO"
+
+            },
+
+            {
+
+                "retribuzioni": "0.0",
+
+                "inail": "0.0",
+
+                "totale": "0.0",
+
+                "contributivo": "0.0",
+
+                "tipoContributo": "STRAORDINARIO"
+
+            },
+
+            {
+
+                "retribuzioni": "201.11",
+
+                "inail": "2.05",
+
+                "totale": "260.23",
+
+                "contributivo": "57.07",
+
+                "tipoContributo": "AGGIUNTIVI"
+
+            },
+
+            {
+
+                "retribuzioni": "306.9",
+
+                "inail": "3.13",
+
+                "totale": "397.09999999999997",
+
+                "contributivo": "87.07",
+
+                "tipoContributo": "FERIE"
+
+            },
+
+            {
+
+                "retribuzioni": "185.64",
+
+                "inail": "173.57",
+
+                "totale": "347.14",
+
+                "contributivo": "-12.07",
+
+                "tipoContributo": "TFR"
+
+            }
+
+        ]
+
+    }
+
+}
