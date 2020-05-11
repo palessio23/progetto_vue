@@ -4,7 +4,7 @@
       <PageHeader />
     </header>
 
-    <div class="site-content">
+    <main class="site-content">
       <div class="container">
         <div class="row no-marginLR">
           <SliderHome />
@@ -18,7 +18,11 @@
 
         </div>
       </div>
-    </div>
+    </main>
+
+    <footer>
+      <FooterHome />
+    </footer>
   </div>
 </template>
 
@@ -27,6 +31,7 @@ import PageHeader from './PageHeader'
 import SliderHome from './SliderHome'
 import ContentHome from './ContentHome'
 import SidebarHome from './SidebarHome'
+import FooterHome from './FooterHome'
 
 export default {
   name: 'page-layout',
@@ -34,7 +39,8 @@ export default {
     PageHeader,
     SliderHome,
     ContentHome,
-    SidebarHome
+    SidebarHome,
+    FooterHome
   }
 }
 </script>
