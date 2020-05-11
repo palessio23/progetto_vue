@@ -12,7 +12,7 @@
     "axios": "^0.19.0",
     "core-js": "^3.3.2",
     "cors": "^2.8.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jqwidgets-scripts": "^8.3.2",
     "mdi-vue": "^1.2.3",
     "mongodb": "^3.5.7",
