@@ -1,36 +1,28 @@
 <template>
-  <div class="container-fluid">
 
     <nav class="navbar navbar-expand-md navbar-fixed-top">
-      <a class="navbar-brand" href="/home/menu">imageHome</a>
-      
-      <div class="navbar-nav">
-        <a href="#" class="nav-item nav-link active">fakeLinkHome</a>
-        <a href="#" class="nav-item nav-link">fakeLinkAbout</a>
-      </div>
-      
-      <div class="btn-group">
-        <button class="btn dropdown-toggle" @mouseover=" clss = 'dropdown-menu dropdown-menu-right show'" @mouseleave=" clss = 'dropdown-menu dropdown-menu-right'"
-          type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ username }}
-        </button>
-        <div :class="clss"  
-          @mouseover = " clss = 'dropdown-menu dropdown-menu-right show' "
-          @mouseleave = " clss = 'dropdown-menu dropdown-menu-right' "
-          aria-labelledby="dropdownMenuButton"
-        >
-          
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <form class="form-inline ml-auto">
-            <button type="button" class="btn" v-on:click="logout"><i class="material-icons">exit_to_app</i> Logout </button>
-          </form>
+      <div class="container">
+        <a class="navbar-brand" href="/home"><img class="logo-link" src="https://life.ns12.it/wp-content/uploads/2019/11/cropped-logodefns12life-2024x507.png"></a>
+
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" @mouseover=" clss = 'dropdown-menu dropdown-menu-right show'" @mouseleave=" clss = 'dropdown-menu dropdown-menu-right'"
+            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ username }}
+          </button>
+          <div :class="clss"
+            @mouseover = " clss = 'dropdown-menu dropdown-menu-right show' "
+            @mouseleave = " clss = 'dropdown-menu dropdown-menu-right' "
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <form class="form-inline ml-auto">
+              <button type="button" class="btn" v-on:click="logout"><i class="material-icons">exit_to_app</i> Logout </button>
+            </form>
+          </div>
         </div>
       </div>
     </nav>
-
-
-    <div class="row">
 
       <main role="main" class="col">
         <transition name="component-fade" mode="out-in">
@@ -38,7 +30,7 @@
         </transition>
       </main>
     </div>
-  </div>
+
 </template>
 
 
@@ -92,11 +84,9 @@ export default {
     padding-right: inherit;
   }
   .navbar{
-    padding-left: 40px;
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
     height: auto;
     background-color: #fff;
-    padding: .4rem 1rem;
     justify-content: space-between;
   }
   .nav-link {
@@ -116,6 +106,10 @@ export default {
     left: 0;
     z-index: 1030;
   }
+  .logo-link {
+    height: 50px;
+    width: auto;
+}
   .flex-column{
     margin-bottom: unset;
   }
@@ -148,4 +142,5 @@ export default {
       margin-right: 0px;
     }
   }
+
 </style>

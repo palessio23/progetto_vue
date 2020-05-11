@@ -1,21 +1,27 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import PageLayout from '../components/Page/PageLayout'
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/home', redirect: '/home/menu' },
     { path: '/login',
       component: () => import('@/components/Login')
     },
     { path: '/register',
       component: () => import('@/components/Register')
     },
-    { path: '/home',
-      component: () => import('@/components/Home'),
+    {
+      name: 'Home',
+      path: '/home',
+      component: PageLayout,
       children: [
+        {
+          path: '/home',
+          component: () => import('@/components/Content'),
+        },
         {
           path: '/home/search',
           component: () => import('@/components/Search'),
@@ -37,5 +43,3 @@ export default new VueRouter({
     { path: '*', redirect: '/home/menu' },
   ]
 });
-
-
