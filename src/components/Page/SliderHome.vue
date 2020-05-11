@@ -2,23 +2,13 @@
   <div class="sezione-slider">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img :src="coppiaImgLink1.img" class="d-block w-100" alt="..." :href="coppiaImgLink1.link">
-      </div>
-      
-      <div v-for="imglink in coppiaImgLinkArr" v-bind:key="imglink.id" class="carousel-item">
-        <img :src="imglink.img" class="d-block w-100" alt="..." :href="imglink.link">
-      </div>
-      
-        <!--<div class="carousel-item active">
-          <img class="d-block w-100" src="https://life.ns12.it/wp-content/uploads/2020/02/slide_1.jpg" alt="First slide">
+        <div class="carousel-item active">
+          <img :src="coppiaImgLink1.img" class="d-block w-100" alt="..." :href="coppiaImgLink1.link">
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://life.ns12.it/wp-content/uploads/2020/02/slide_2.jpg" alt="Second slide">
+
+        <div v-for="imglink in coppiaImgLinkArr" v-bind:key="imglink.id" class="carousel-item">
+          <img :src="imglink.img" class="d-block w-100" alt="..." :href="imglink.link">
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg" alt="Third slide">
-        </div>-->
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <div class="sfondo-control-icon">
@@ -28,7 +18,7 @@
       </a>
       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
         <div class="sfondo-control-icon">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </div>
         <span class="sr-only">Next</span>
       </a>
@@ -43,7 +33,7 @@ export default {
     return {
       coppiaImgLink1: {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_1.jpg", link:"link1"},
       coppiaImgLinkArr: [{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_2.jpg", link:"link2"},
-                         {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg", link:"link3"}]
+      {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg", link:"link3"}]
     }
   }
 }
