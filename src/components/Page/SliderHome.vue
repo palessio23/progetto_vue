@@ -43,7 +43,7 @@ export default {
     .then( res => {
       let arr = res.data;
       coppiaImgLink1 = arr[0];
-      for(i=1; i < arr.length; i++){
+      for(let i=1; i < arr.length; i++){
         coppiaImgLinkArr[i-1] = arr[i];
       }
     })
