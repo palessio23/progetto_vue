@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 let serverUrl = 'http://localhost:8080';
 export default {
   name: 'sezione-slider',
@@ -46,7 +47,7 @@ export default {
         coppiaImgLinkArr[i-1] = arr[i];
       }
     })
-    .catch(err => console.log(err));
+    .catch(err => window.console.log(err));
   }
 }
 </script>
