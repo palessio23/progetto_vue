@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       coppiaImgLink1: {img:'',link:''},  //{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_1.jpg", link:"link1"},
-      coppiaImgLinkArr: [{img:'',link:''}] /*[{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_2.jpg", link:"link2"},
+      coppiaImgLinkArr: [] /*[{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_2.jpg", link:"link2"},
       {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg", link:"link3"}]*/
     }
   },
