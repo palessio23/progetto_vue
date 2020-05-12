@@ -63,14 +63,12 @@ export default {
         }
       ).then( res => {
         if(res.status === 200) {
-      window.console.log(res.data.included)
           this.$store.state.jsonProductUser=res.data.included;
           this.$store.state.username = user;// correct?
           //this.$router.push('/home');
         }
       }).then( () => {
         this.product = this.$store.state.jsonProductUser;
-        window.console.log(this.product);
       }).catch( err => {
         window.console.log("(menu) product not obtained, beforeMount: " + err); // TO DO: show some message into the page or redirect, for now redirect
         this.$router.push("/login");
