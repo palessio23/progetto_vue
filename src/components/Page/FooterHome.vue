@@ -3,15 +3,6 @@
   <div class="sfondo-footer">
     <div class="container">
       <div class="row">
-        <!--<div class="col-sm margin-colonna">
-          Colonna1
-        </div>
-        <div class="col-sm margin-colonna">
-          Colonna2
-        </div>
-        <div class="col-sm margin-colonna">
-          Colonna3
-        </div>-->
         <div v-for="col in cols" v-bind:key="col.id" class="col-sm margin-colonna">
           {{col}}
         </div>
@@ -19,7 +10,7 @@
     </div>
   </div>
   <div class="footer-credit">
-    <p class="footer-info">COPYRIGHT © 2020 </p>
+    <p class="footer-info">{{cr}}</p>
   </div>
     </div>
 </template>
@@ -29,7 +20,8 @@ export default {
   name: 'Home',
   data () {
     return {
-      cols:["Colonna1","Colonna2","Colonn"]
+      cols:["Colonna1","Colonna2","Colonna3"],
+      cr: "COPYRIGHT © 2020"
     }
   }
 }

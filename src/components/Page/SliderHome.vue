@@ -27,14 +27,26 @@
 </template>
 
 <script>
+let serverUrl = 'http://localhost:8080';
 export default {
   name: 'sezione-slider',
   data () {
     return {
-      coppiaImgLink1: {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_1.jpg", link:"link1"},
-      coppiaImgLinkArr: [{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_2.jpg", link:"link2"},
-      {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg", link:"link3"}]
+      coppiaImgLink1: '',  //{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_1.jpg", link:"link1"},
+      coppiaImgLinkArr: '' /*[{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_2.jpg", link:"link2"},
+      {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg", link:"link3"}]*/
     }
+  },
+  beforeMount(){
+    axios.post(serverUrl + 'sliderImg')
+    .then( res => {
+      let arr = res.data;
+      coppiaImgLink1 = arr[0];
+      for(i=1; i < arr.length; i++){
+        coppiaImgLinkArr[i-1] = arr[i];
+      }
+    })
+    .catch(err => console.log(err));
   }
 }
 </script>

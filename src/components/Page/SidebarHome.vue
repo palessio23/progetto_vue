@@ -30,8 +30,8 @@
     <div class="sezione-logout">
       <div class="list-prodotto">
         <i class="material-icons icona-prodotto">exit_to_app</i>
-              <a href="#" class="link-titolo-prodotto">Logout</a>
-            </div>
+          <a href="#" class="link-titolo-prodotto">Logout</a>
+      </div>
     </div>
 
   </div>
