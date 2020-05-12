@@ -28,7 +28,7 @@
 
 <script>
 import axios from 'axios';
-let serverUrl = 'http://localhost:8080';
+let serverUrl = 'http://localhost:3000';
 export default {
   name: 'sezione-slider',
   data () {
