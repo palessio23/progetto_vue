@@ -1,5 +1,5 @@
 <template>
-
+  <div class="Home">
     <nav class="navbar navbar-expand-md navbar-fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/home"><img class="logo-link" src="https://life.ns12.it/wp-content/uploads/2019/11/cropped-logodefns12life-2024x507.png"></a>
