@@ -45,7 +45,7 @@ export default {
       window.console.log("print" + res.data)
       this.coppiaImgLink1 = arr[0];
       for(let i=1; i < arr.length; i++){
-        this.coppiaImgLinkArr[i-1] = arr[i];
+        this.coppiaImgLinkArr[i-1].add(arr[i]);
       }
     })
     .catch(err => window.console.log(err));
