@@ -162,7 +162,7 @@ app.post('/sliderImg', (req, res) => {
     { img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg", link:"link3" }
   ]
   
-  res.status(200).end(JSON.stringify(json));
+  res.status(200).end(json);
 });
 
 app.post('/retrieveResource', function (req, res) {
