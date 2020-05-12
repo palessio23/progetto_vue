@@ -39,7 +39,7 @@ export default {
     }
   },
   beforeMount(){
-    axios.post(serverUrl + 'sliderImg')
+    axios.post(serverUrl + '/sliderImg')
     .then( res => {
       let arr = res.data;
       window.console.log("print" + res.data)
