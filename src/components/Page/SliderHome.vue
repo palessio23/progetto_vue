@@ -41,7 +41,7 @@ export default {
   beforeMount(){
     axios.post(serverUrl + '/sliderImg')
     .then( res => {
-      let arr = res.data;
+      let arr = res;
       window.console.log("print" + res)
       this.coppiaImgLink1 = arr[0];
       for(let i=1; i < arr.length; i++){
