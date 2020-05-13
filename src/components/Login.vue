@@ -71,7 +71,6 @@
               this.$store.state.username = this.username; //memorize user actually logged
               var token = res.data.data.attributes.token; //fake token
               localStorage.user = this.username;
-              window.console.log(localStorage.user);
               localStorage.token = token;
               this.$router.push('/home');//correct credentials => go to home
             }

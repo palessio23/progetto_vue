@@ -4,12 +4,12 @@
     <div class="sezione-utente">
       <div class="dati-user" id="margin-right">
         <a href="#">
-          <img src="https://life.ns12.it/wp-content/uploads/avatars/1/5da585a5729ed-bpfull.jpg" class="img-user" width="150" height="150" alt="Foto del Profilo">
+          <img :src="userImg" class="img-user" width="150" height="150" alt="Foto del Profilo">
         </a>
       </div>
       <div class="dati-user">
         <span>ciao !</span>
-        <a href="#" >{{ username }}</a>
+        <a href="#" >{{ userName }}</a>
       </div>
     </div>
 
@@ -29,8 +29,8 @@
 
     <div class="sezione-logout">
       <div class="list-prodotto">
-        <i class="material-icons icona-prodotto">exit_to_app</i>
-          <a href="#" class="link-titolo-prodotto">Logout</a>
+        <i @click="logout()" class="material-icons icona-prodotto">exit_to_app</i>
+          <a @click="logout()" class="link-titolo-prodotto">Logout</a><!--modificare il css per renderlo simile ad un link-->
       </div>
     </div>
 
@@ -42,7 +42,9 @@ export default {
   data () {
     return {
       username: localStorage.user,
-      product: ''
+      product: '',
+      userName: this.$store.state.user.name,
+      userImg: this.$store.state.user.imgProfile
     }
   },
   beforeMount(){// obtain user product to show, alternative explanation: refresh
@@ -64,7 +66,7 @@ export default {
       ).then( res => {
         if(res.status === 200) {
           this.$store.state.jsonProductUser=res.data.included;
-          this.$store.state.username = user;// correct?
+          this.$store.state.user.name = user;// correct?
           //this.$router.push('/home');
         }
       }).then( () => {
@@ -73,6 +75,12 @@ export default {
         window.console.log("(menu) product not obtained, beforeMount: " + err); // TO DO: show some message into the page or redirect, for now redirect
         this.$router.push("/login");
       });
+    }
+  },
+  methods:{
+    logout: function(){
+      localStorage.removeItem('token');
+      this.$router.push('/login');
     }
   }
 }
@@ -157,5 +165,6 @@ text-transform: capitalize;
 }
 .sezione-logout {
 border-top: 1px solid #f2f2f2;
+cursor: pointer;
 }
 </style>
