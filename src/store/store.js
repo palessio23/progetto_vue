@@ -9,6 +9,10 @@ export default new Vuex.Store({
     detailsRes: '',
     infoResource: '',
     registryRes: {},
-    jsonProductUser: ''
+    jsonProductUser: '',
+
+
+    // new var
+    serverUrl: "http://localhost:3000"
   }
 })

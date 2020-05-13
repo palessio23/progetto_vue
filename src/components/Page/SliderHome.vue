@@ -28,25 +28,22 @@
 
 <script>
 import axios from 'axios';
-let serverUrl = 'http://localhost:3000';
+
 export default {
   name: 'sezione-slider',
   data () {
     return {
-      coppiaImgLink1: {img:'',link:''},  //{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_1.jpg", link:"link1"},
-      coppiaImgLinkArr: [] /*[{img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_2.jpg", link:"link2"},
-      {img:"https://life.ns12.it/wp-content/uploads/2020/02/slide_3.jpg", link:"link3"}]*/
+      coppiaImgLink1: {img:'',link:''},
+      coppiaImgLinkArr: []
     }
   },
   beforeMount(){
-    axios.post(serverUrl + '/sliderImg')
+    axios.post(this.$store.state.serverUrl + '/sliderImg')
     .then( res => {
-      let arr = res.data.data;
-      window.console.log("print1" + res);
-      window.console.log("print2" + res.data.json);
+      let arr = res.data;
       this.coppiaImgLink1 = arr[0];
       for(let i=1; i < arr.length; i++){
-        this.coppiaImgLinkArr[i-1].add(arr[i]);
+        this.coppiaImgLinkArr[i-1] = arr[i];
       }
     })
     .catch(err => window.console.log(err));
