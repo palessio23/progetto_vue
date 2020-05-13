@@ -29,9 +29,9 @@ let json =
       "type": "account",
       "id": "val",
       "attributes": {
-        "username": "sam",
-        "token":"val"
-
+        "username": "Sam",
+        "token":"val",
+        "img":"https://life.ns12.it/wp-content/uploads/avatars/1/5da585a5729ed-bpfull.jpg"
     },"relationships": {
       "product": {
         "data": [
@@ -125,7 +125,7 @@ let json =
 
 
 
-app.post('/register', function (req, res) {
+/*app.post('/register', function (req, res) {
   var attributes = req.body.data.attributes;
   console.log(attributes.username);
   console.log(attributes.password);
@@ -152,7 +152,7 @@ app.post('/register', function (req, res) {
       }
     });
   });
-});
+});*/
 
 
 app.post('/sliderImg', (req, res) => {
@@ -287,7 +287,7 @@ let json =
 });
 
 // the user is not necessary
-app.post('/validateSession', function (req, res) {// if the session is valid return a user with the associated product
+/*app.post('/validateSession', function (req, res) {// if the session is valid return a user with the associated product
   var username = req.body.data.attributes.username;
   var userToken = req.body.data.attributes.token;
   MongoClient.connect(urlDB, function(err, db) {
@@ -340,7 +340,7 @@ app.post('/validateSession', function (req, res) {// if the session is valid ret
       }
     });
   });
-});
+});*/
 
 
 

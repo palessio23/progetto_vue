@@ -68,9 +68,10 @@
           ).then( (res) => {
             if(res.status === 200){
               this.$store.state.jsonProductUser=res.data.included;
-              this.$store.state.username = this.username; //memorize user actually logged
+              this.$store.state.user.name = res.data.data.attributes.username; //memorize user actually logged
+              this.$store.state.user.imgProfile = res.data.data.attributes.img;
               var token = res.data.data.attributes.token; //fake token
-              localStorage.user = this.username;
+              localStorage.user = this.username;// versione alternativa che fa uso di html storage
               localStorage.token = token;
               this.$router.push('/home');//correct credentials => go to home
             }
